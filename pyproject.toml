@@ -5,7 +5,15 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "src"
 version = "0.0.1"
-dynamic = ["dependencies"]
+dependencies = [
+    "package0==1.0.0"
+]
 
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
+[project.optional.dependencies]
+optional1 = [
+    "package1==1.0.0"
+]
+
+optional2 = [
+    "package2==1.0.0"
+]
